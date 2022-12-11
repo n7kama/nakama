@@ -1,0 +1,168 @@
+
+Table ORDERTEST dropped.
+
+
+Table TIMECARD dropped.
+
+
+Table PATIENT dropped.
+
+
+Table NURSE dropped.
+
+
+Table PHYSICIAN dropped.
+
+
+Table BED dropped.
+
+
+Table TEST1 dropped.
+
+
+Table PHYSICIAN created.
+
+
+Table BED created.
+
+
+Table TEST1 created.
+
+
+Table PATIENT created.
+
+
+Table NURSE created.
+
+
+Table TIMECARD created.
+
+
+Table ORDERTEST created.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+Commit complete.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+Commit complete.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+Commit complete.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+Commit complete.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+Commit complete.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+Commit complete.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+Commit complete.
+
