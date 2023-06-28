@@ -1,0 +1,13 @@
+{
+    "name": "crud-app",
+    "version": "1.0.0",
+    "description": "App that connects mongoose client to mongodb server for CRUD ops plus JWT auth",
+    "author": "my_name",
+    "main": "app.js",
+    "scripts": {
+    "start": "npm install && node app"
+    },
+    "dependencies": {
+    "express": "*"
+    }
+}
