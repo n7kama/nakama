@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title> One Piece Game </title>
+        <link rel="icon" href="assets/strwhtsflg.png" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>Adventure</h1>
+        <hr>
+        
+        <img class='pic' src='assets/onepiecemap.jpeg' width="480" />
+        <h4>What do you want to do?</h4>
+        <ul id = 'options'>
+            <li> <a id='nami' href='nami.html'> <button>Recruit Nami</button> </a> </li>
+            <li> <a id='arlong' href='arlong.html'> <button>Fight Arlong</button> </a> </li>
+            <li> <a id='cocoyasi' href='cocoyasi.html'> <button>Explore Cocoyasi Village</button> </a> </li>
+            
+        </ul>
+        <hr>
+        <iframe src='progress.html' id=progress height=100 width=75></iframe>
+        <script>
+            progress.src += location.search; //concat the search parameter to the iframe's src attribute
+            nami.href += location.search; //concat the search parameter to the anchor's href attribute
+            arlong.href += location.search; //concat the search parameter to the anchor's href attribute
+            cocoyasi.href += location.search; //concat the search parameter to the anchor's href attribute
+            
+
+            var queryString = new URLSearchParams(location.search);
+            var mem=+queryString.get("mem");
+            var btl=+queryString.get("btl");
+            var isl=+queryString.get("isl");
+
+           
+
+        </script>
+    </body>
+<html>

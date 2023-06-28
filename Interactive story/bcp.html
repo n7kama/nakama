@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title> One Piece Game </title>
+        <link rel="icon" href="assets/strwhtsflg.png" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>Syrup Village</h1>
+        <hr>
+        <img class='pic' id='kuro' src='assets/kuro.gif' width="480">
+        <p id='text'> I am Kuro, Captain of the Black Cat Pirates. This is my territory!
+        </p>
+        <h4> What do you do? </h4>
+        <div id='options'>
+            <button id='fight' onclick='attack()'> Fight </button>
+            <a id='exit' href='adventurethree.html'>
+                <button> Retreat </button>
+            </a>
+        </div>
+        <p id='battleText'></p>
+        <hr>
+        <iframe src='progress.html' id="progress" height=100 width=75></iframe>
+        <script>
+            progress.src += location.search;
+            exit.href += location.search;
+
+            var queryString = new URLSearchParams(location.search);
+            var mem =+queryString.get("mem");
+            var btl=+queryString.get("btl");
+
+            function attack(){
+
+                if (mem == 3){
+                    battleText.innerHTML = `You defeated Kuro!`
+                    queryString.set('btl', btl+1);
+                    options.innerHTML =`<a href = 'adventurethree.html?${queryString}'><button>Go back</button></a`
+
+                    
+                }
+                else {
+                    battleText.innerHTML = `You are not strong enough to fight Kuro. Try to find more members to join your crew.`
+                    
+                    
+                }
+            }
+        </script>
+    </body>
+<html>

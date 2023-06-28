@@ -1,0 +1,24 @@
+<html>
+    <head></head>
+    <body>
+        Progress: <hr>
+        <table>
+            <tr>
+                <th> &#127988; </th> 
+                <th> &#9876; </th> 
+                <th> &#127965; </th> 
+            </tr>
+            <tr>
+                <td id='mem'>0</td>
+                <td id='btl'>0</td>
+                <td id='isl'>0</td>
+            </tr>
+        </table>
+        <script> 
+            var queryString = new URLSearchParams(location.search);
+            mem.innerText = queryString.get("mem");
+            btl.innerText = queryString.get("btl");
+            isl.innerText = queryString.get("isl");
+        </script>
+    </body>
+<html>

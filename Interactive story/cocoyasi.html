@@ -1,0 +1,46 @@
+<html>
+   <head>
+      <title> One Piece Game </title>
+      <link rel="icon" href="assets/strwhtsflg.png">
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <h1> Cocoyasi Village </h1>
+      <hr>
+      <img class='pic' id="pic" src="assets/cocoyasivillage.jpeg" width="480">
+      <p id="text"> You arrive in Cocoyasi village. Everyone's money in town seems to have gone missing.</p>
+      <h4> What would you like to do? </h4>
+      <div id='options'>
+         <a id='treasure' href='treasureoncoco.html'>
+            <button> Look for Treasure on Cocoyasi Village. </button>
+         </a>
+         <button id='explore' onclick='explore()'> Finish Exploring Cocoyasi Village. </button>
+         <a id='exit' href='adventuretwo.html'>
+            <button> Exit back to Map. </button>
+         </a>
+     </div>
+      <p id='textbox'></p>
+      <hr>
+      <iframe src="progress.html" id="progress" height="100" width="75"></iframe>
+      <script>
+         progress.src += location.search;
+         treasure.href += location.search;
+         exit.href += location.search; 
+         var queryString = new URLSearchParams(location.search);
+         var mem= +queryString.get("mem");
+         var btl= +queryString.get("btl");
+         var isl= +queryString.get("isl");
+
+         function explore(){
+            if( btl == 2){
+               queryString.set('isl', isl+1);
+               options.innerHTML =`<a href = 'syrup.html?${queryString}'><button>Go to Syrup Village</button></a`
+               
+               
+            }else{
+               textbox.innerHTML = 'Must defeat defeat Captaing Arlong before leaving the city.'
+            }
+         }
+      </script>
+   </body>
+</html>

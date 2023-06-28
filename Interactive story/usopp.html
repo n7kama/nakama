@@ -1,0 +1,57 @@
+<head>
+        <title> One Piece Game </title>
+        <link rel="icon" href="assets/strwhtsflg.png">
+        <link rel="stylesheet" href="style.css" />
+     </head>
+     <body>
+        <h1> Usopp </h1>
+        <hr>
+        <img class='pic' id="pic" src="assets/usopp.webp" width="480">
+        <p id="text"> My name is Usopp. I have slain giants and I am the commander of 1000 pirate fleets.</p>
+        <h4> What would you like to do? </h4>
+        <div id='options'>
+           <button id='recruit' onclick='recruit()'> Recruit Usopp </button>
+           <a id='exit' href='adventurethree.html'>
+               <button> Exit back to Map. </button>
+           </a>
+       </div>
+        <p id='textbox'></p>
+        <div>
+            <input type="text" id='inputText'>
+            <input type="button" value='Submit' onClick="magicWord()">
+        </div>
+        <hr>
+        <iframe src="progress.html" id="progress" height="100" width="75"></iframe>
+        <script>
+           progress.src += location.search;
+           exit.href += location.search; 
+           var queryString = new URLSearchParams(location.search);
+           var mem=+queryString.get("mem");
+           var btl=+queryString.get("btl");
+           var isl=+queryString.get("isl");
+    
+           function recruit(){
+                textbox.innerHTML = "What is Usopp's weapon? a. sword, b. gun, c. fists, d. slingshot (type the answer that is correct)"
+            }
+            function magicWord(){
+                    if (inputText.value == 'slingshot'){
+                        textbox.innerHTML = `You recruited Usopp!`
+                        queryString.set('mem', mem+1);
+                        options.innerHTML =`<a href = 'adventurethree.html?${queryString}'><button>Go back</button></a`
+                       
+                    }
+                    else {
+                        document.body.innerHTML = (
+                            `<h1>You Died</h1>
+                            <p>You did not get Usopp's weapon right, so he used his slingshot to kill you.</p>
+                            <a href="index.html"> <h4>Game Over</h4> </a>
+                            <audio autoplay>
+                            <source src="assets/usopptheme.mp3">
+                            </audio>`
+                        );
+                    }
+                }
+    
+        </script>
+     </body>
+    </html>

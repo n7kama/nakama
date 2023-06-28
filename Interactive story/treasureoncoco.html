@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title> One Piece Game </title>
+        <link rel="icon" href="assets/strwhtsflg.png" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>Cocoyasi Village</h1>
+        <hr>
+        <img class ='pic' id="pic" src="assets/treasurechest.png" width="480">
+        <p id="text"> You find a treasure chest that contains a hidden letter.</p>
+        <hr>
+        <img class='pic' id="pic" src="assets/tablet.jpeg" width="480">
+        <div id='options'>
+            <a id='back' href='cocoyasi.html'>
+                <button> Go Back </button>
+            </a>
+        </div>
+        <hr>
+        <iframe src="progress.html" id="progress" height="100" width="75"></iframe>
+        <script>
+            progress.src += location.search;
+            back.href += location.search; 
+            var queryString = new URLSearchParams(location.search);
+            var mem=+queryString.get("mem");
+            var btl=+queryString.get("btl");
+            var isl=+queryString.get("isl");
+
+        </script>
+    </body>
+</html>

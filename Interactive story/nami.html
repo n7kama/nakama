@@ -1,0 +1,57 @@
+<head>
+    <title> One Piece Game </title>
+    <link rel="icon" href="assets/strwhtsflg.png">
+    <link rel="stylesheet" href="style.css" />
+ </head>
+ <body>
+    <h1> Nami </h1>
+    <hr>
+    <img class='pic' id="pic" src="assets/nami.gif" width="480">
+    <p id="text"> My name is Nami, certified navigator and bombshell!</p>
+    <h4> What would you like to do? </h4>
+    <div id='options'>
+       <button id='recruit' onclick='recruit()'> Recruit Nami </button>
+       <a id='exit' href='adventuretwo.html'>
+           <button> Exit back to Map. </button>
+       </a>
+   </div>
+    <p id='textbox'></p>
+    <div>
+        <input type="text" id='inputText'>
+        <input type="button" value='Submit' onClick="magicWord()">
+    </div>
+    <hr>
+    <iframe src="progress.html" id="progress" height="100" width="75"></iframe>
+    <script>
+       progress.src += location.search;
+       exit.href += location.search; 
+       var queryString = new URLSearchParams(location.search);
+       var mem=+queryString.get("mem");
+       var btl=+queryString.get("btl");
+       var isl=+queryString.get("isl");
+
+       function recruit(){
+            textbox.innerHTML = 'What does Nami love most? a. money, b. the weather, c. sailing, d. fighting (type the answer that is correct)'
+        }
+        function magicWord(){
+                if (inputText.value == 'money'){
+                    textbox.innerHTML = `You recruited Nami!`
+                    queryString.set('mem', mem+1);
+                    options.innerHTML =`<a href = 'adventuretwo.html?${queryString}'><button>Go back</button></a`
+                   
+                }
+                else {
+                    document.body.innerHTML = (
+                        `<h1>You Died</h1>
+                        <p>You did not get Nami's most loved thing right, so she knocked you unconscious and stole your money .</p>
+                        <a href="index.html"> <h4>Game Over</h4> </a>
+                        <audio autoplay>
+                        <source src="assets/nami.mp3">
+                        </audio>`
+                    );
+                }
+            }
+
+    </script>
+ </body>
+</html>

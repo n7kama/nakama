@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title> One Piece Game </title>
+        <link rel="icon" href="assets/strwhtsflg.png" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>Adventure</h1>
+        <hr>
+        <img class='pic' src='assets/onepiecemap.jpeg' width="480" />
+        <h4>What do you want to do?</h4>
+        <ul id = 'options'>
+            <li> <a id='recruit' href='recruit.html'> <button>Recruit Zoro</button> </a> </li>
+            <li> <a id='fight' href='fight.html'> <button>Fight Buggy</button> </a> </li>
+            <li> <a id='explore' href='explore.html'> <button>Explore Orange Town</button> </a> </li>
+            
+        </ul>
+        <hr>
+        <iframe src='progress.html' id=progress height=100 width=75></iframe>
+        <script>
+            progress.src += location.search; //concat the search parameter to the iframe's src attribute
+            recruit.href += location.search; //concat the search parameter to the anchor's href attribute
+            fight.href += location.search; //concat the search parameter to the anchor's href attribute
+            explore.href += location.search; //concat the search parameter to the anchor's href attribute
+            
+
+            var queryString = new URLSearchParams(location.search);
+            var mem=+queryString.get("mem");
+            var btl=+queryString.get("btl");
+            var isl=+queryString.get("isl");
+
+           
+
+        </script>
+    </body>
+<html>

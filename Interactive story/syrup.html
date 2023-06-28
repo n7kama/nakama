@@ -1,0 +1,42 @@
+<html>
+   <head>
+      <title> One Piece Game </title>
+      <link rel="icon" href="assets/strwhtsflg.png">
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <h1> Syrup Village </h1>
+      <hr>
+      <img class='pic' id="pic" src="assets/syrupvillage.webp" width="480">
+      <p id="text"> You arrive in Syrup village. </p>
+      <h4> What would you like to do? </h4>
+      <div id='options'>
+         <button id='explore' onclick='explore()'> Finish Exploring Syrup Village. </button>
+         <a id='exit' href='adventurethree.html'>
+             <button> Exit back to Map. </button>
+         </a>
+     </div>
+      <p id='textbox'></p>
+      <hr>
+      <iframe src="progress.html" id="progress" height="100" width="75"></iframe>
+      <script>
+         progress.src += location.search;
+         exit.href += location.search; 
+         var queryString = new URLSearchParams(location.search);
+         var mem= +queryString.get("mem");
+         var btl= +queryString.get("btl");
+         var isl= +queryString.get("isl");
+
+         function explore(){
+            if( btl == 3){
+               queryString.set('isl', isl+1);
+               options.innerHTML =`<a href = 'baratie.html?${queryString}'><button>Go to Baratie the Resaurant Ship</button></a`
+               
+               
+            }else{
+               textbox.innerHTML = 'Must defeat the Captain Kuro before leaving the city.'
+            }
+         }
+      </script>
+   </body>
+</html>
